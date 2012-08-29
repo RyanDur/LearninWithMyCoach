@@ -7,13 +7,14 @@ import java.net.Socket;
 public class AcceptAClientConnection {
     public static void main(String[] args) throws IOException {
         ServerSocket socket = null;
+        Socket connection = null;
         String response;
         BufferedReader inputReader = null;
 
         try {
             socket = new ServerSocket(8080);
             System.out.println("listening on port: " + socket.getLocalPort());
-            Socket connection = socket.accept();
+            connection = socket.accept();
             System.out.println("Connection received from " + connection);
             inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         } catch (IOException e) {
@@ -23,5 +24,6 @@ public class AcceptAClientConnection {
         while ((response = inputReader.readLine()) != null) {
             System.out.println(response);
         }
+        connection.close();
     }
 }
