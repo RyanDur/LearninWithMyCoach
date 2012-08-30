@@ -5,8 +5,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class RespondToClient {
-    public static void main(String[] args) throws IOException {
-        String statusLine = "HTTP/1.1 200 OK";
+    public static void main(String[] args) {
+        String statusLine = "HTTP/1.0 200 OK\r\n";
         ServerSocket socket = null;
         Socket connection = null;
         BufferedReader inputReader = null;
@@ -17,15 +17,20 @@ public class RespondToClient {
             System.out.println("listening on port: " + socket.getLocalPort());
             connection = socket.accept();
             System.out.println("Connection received from " + connection);
-            connection.getOutputStream().write(statusLine.getBytes());
             inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            while (!(response = inputReader.readLine()).equals("")) {
+                System.out.println(response);
+            }
+            connection.getOutputStream().write(statusLine.getBytes());
         } catch (IOException e) {
-            System.out.println("Could not listen on port: 8080");
-            System.exit(-1);
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                socket.close();
+                connection.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        while ((response = inputReader.readLine()) != null) {
-            System.out.println(response);
-        }
-        connection.close();
     }
 }
