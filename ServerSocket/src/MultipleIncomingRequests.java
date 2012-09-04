@@ -5,15 +5,26 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class MultipleIncomingRequests implements Runnable {
-    private ServerSocket socket = null;
-    private Socket connection = null;
-    private Thread thread = null;
+    String statusLine = "HTTP/1.0 200 OK\r\n";
+    ServerSocket socket = null;
+    Socket connection = null;
+    BufferedReader inputReader = null;
+    String response;
 
-    public MultipleIncomingRequests() {
+    @Override
+    public void run() {
         try {
             socket = new ServerSocket(8080);
             System.out.println("listening on port: " + socket.getLocalPort());
-            start();
+            while (true) {
+                connection = socket.accept();
+                System.out.println("Connection received from " + connection);
+                inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                while (!(response = inputReader.readLine()).equals("")) {
+                    System.out.println(response);
+                }
+                connection.getOutputStream().write(statusLine.getBytes());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
@@ -25,40 +36,18 @@ public class MultipleIncomingRequests implements Runnable {
         }
     }
 
-    public void start() {
-        if (thread == null) {
-            thread = new Thread(this);
-            thread.start();
-        }
-    }
-
-    public void stop() throws IOException {
-        connection.close();
-    }
-
-    public void read() throws IOException {
-        BufferedReader inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-        String statusLine = "HTTP/1.0 200 OK\r\n";
-        String response;
-        while (!(response = inputReader.readLine()).equals("")) {
-            System.out.println(response);
-        }
-        connection.getOutputStream().write(statusLine.getBytes());
-    }
-
-    @Override
-    public void run() {
-        while (null != thread) {
-            try {
-                connection = socket.accept();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Connection received from " + connection);
+    public void close() {
+        try {
+            connection.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     public static void main(String[] args) {
-
+        MultipleIncomingRequests server = null;
+        server = new MultipleIncomingRequests();
+        server.run();
+        server.close();
     }
 }
