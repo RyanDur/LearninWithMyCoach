@@ -15,19 +15,21 @@ public class RespondToClient {
         try {
             socket = new ServerSocket(8080);
             System.out.println("listening on port: " + socket.getLocalPort());
-            connection = socket.accept();
-            System.out.println("Connection received from " + connection);
-            inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            while (!(response = inputReader.readLine()).equals("")) {
-                System.out.println(response);
+            while (true) {
+                connection = socket.accept();
+                System.out.println("Connection received from " + connection);
+                inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                while (!(response = inputReader.readLine()).equals("")) {
+                    System.out.println(response);
+                }
+                connection.getOutputStream().write(statusLine.getBytes());
+                connection.close();
             }
-            connection.getOutputStream().write(statusLine.getBytes());
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
             try {
                 socket.close();
-                connection.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
