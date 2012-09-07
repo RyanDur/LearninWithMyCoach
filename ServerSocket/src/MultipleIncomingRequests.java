@@ -1,53 +1,48 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class MultipleIncomingRequests implements Runnable {
-    String statusLine = "HTTP/1.0 200 OK\r\n";
-    ServerSocket socket = null;
-    Socket connection = null;
-    BufferedReader inputReader = null;
-    String response;
+    Socket csocket;
+
+    MultipleIncomingRequests(Socket csocket) {
+        this.csocket = csocket;
+    }
 
     @Override
     public void run() {
-        try {
-            socket = new ServerSocket(8080);
-            System.out.println("listening on port: " + socket.getLocalPort());
-            while (true) {
-                connection = socket.accept();
-                System.out.println("Connection received from " + connection);
-                inputReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                while (!(response = inputReader.readLine()).equals("")) {
-                    System.out.println(response);
-                }
-                connection.getOutputStream().write(statusLine.getBytes());
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+        String statusLine = "HTTP/1.0 200 OK\r\n";
+        BufferedReader inputReader = null;
+        String response;
 
-    public void close() {
         try {
-            connection.close();
+            inputReader = new BufferedReader(new InputStreamReader(csocket.getInputStream()));
+            while (!(response = inputReader.readLine()).equals("")) {
+                System.out.println(response);
+            }
+            csocket.getOutputStream().write(statusLine.getBytes());
+            csocket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-        MultipleIncomingRequests server = null;
-        server = new MultipleIncomingRequests();
-        server.run();
-        server.close();
+    public static void main(String[] args) throws IOException {
+        ServerSocket socket = null;
+        Socket connection = null;
+
+        try {
+            socket = new ServerSocket(8080);
+            System.out.println("listening on port: " + socket.getLocalPort());
+            while (true) {
+                connection = socket.accept();
+                Thread thread = new Thread(new MultipleIncomingRequests(connection));
+                thread.start();
+                System.out.println("Connection received from " + connection);
+            }
+        } catch (IOException e) {
+            System.out.println("Could not listen on port: 8080");
+            System.exit(-1);
+        }
     }
 }
