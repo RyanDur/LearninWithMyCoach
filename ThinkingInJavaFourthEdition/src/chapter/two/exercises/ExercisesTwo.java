@@ -1,5 +1,7 @@
 package chapter.two.exercises;
 
+import java.util.Random;
+
 class Letter {
     char c;
 }
@@ -53,20 +55,47 @@ public class ExercisesTwo {
 //      with names “spot” (who says, “Ruff!”) and “scruffy” (who says, “Wurf!”). Then display their names and what they
 //      say.
 
+        Dog spot = new Dog("spot", "Ruff!");
+        Dog scruffy = new Dog("scruffy", "Wurf!");
+
+        spot.speak();
+        scruffy.speak();
+
 // Exercise 6:  (3) Following Exercise 5, create a new Dog reference and assign it to spot’s object. Test for comparison
 //      using == and equals( ) for all references.
 
+        Dog spike;
+
+        spike = spot;
+        System.out.println(spike == spot);
+        System.out.println(spike.equals(spot));
+
 // Exercise 7:  (3) Write a program that simulates coin-flipping.
+
+        Coin coin = new Coin();
+        System.out.println(coin.flip());
 
 // Exercise 8:  (2) Show that hex and octal notations work with long values. Use Long.toBinaryString( ) to display the
 //      results.
 
+        long hex = 0x2f;
+        long oct = 0177;
+        System.out.println(Long.toBinaryString(hex));
+        System.out.println(Long.toBinaryString(oct));
+
 // Exercise 9:  (1) Display the largest and smallest numbers for both float and double exponential notation.
+
+        System.out.println(Float.MIN_EXPONENT);
+        System.out.println(Float.MAX_EXPONENT);
+        System.out.println(Double.MIN_EXPONENT);
+        System.out.println(Double.MAX_EXPONENT);
 
 // Exercise 10:    (3) Write a program with two constant values, one with alternating binary ones and zeroes, with a
 //      zero in the least-significant digit, and the second, also alternating, with a one in the least-significant digit
 //      (hint: It’s easiest to use hexadecimal constants for this). Take these two values and combine them in all
 //      possible ways using the bitwise operators, and display the results using Integer.toBinaryString( ).
+
+
 
 // Exercise 11:    (3) Start with a number that has a binary one in the most significant position (hint: Use a
 //      hexadecimal constant). Using the signed right-shift operator, right shift it all the way through all of its
