@@ -3,12 +3,6 @@ package chapter.three.exercises;
 import java.util.Random;
 
 public class ExercisesThree {
-    public int gcd(int p, int q) {
-        if (q == 0) {
-            return p;
-        }
-        return gcd(q, p % q);
-    }
     public static void main(String[] args) {
 // Exercise 1:   (1) Write a program that prints values from 1 to 100.
 
@@ -95,6 +89,19 @@ public class ExercisesThree {
 
 // Exercise 8:  (2) Create a switch statement that prints a message for each case, and put the switch inside a for loop
 //      that tries each case. Put a break after each case and test it, then remove the breaks and see what happens.
+
+        for (int i = 0; i < 3; i++){
+            switch (i) {
+                case 0:
+                    System.out.println("this is i " + i);
+                    break;
+                case 1:
+                    System.out.println("this is i " + i);
+                    break;
+                case 2:
+                    System.out.println("this is i " + i);
+            }
+        }
 
 // Exercise 9:  (4) A Fibonacci sequence is the sequence of numbers 1, 1, 2, 3, 5, 8, 13, 21, 34, and so on, where each
 //      number (from the third on) is the sum of the previous two. Create a method that takes an integer as an argument

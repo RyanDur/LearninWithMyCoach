@@ -2,7 +2,7 @@ package chapter.five.excercises;
 
 public class ExcercisesFive {
     public static void main(String[] args) {
-// Exercise 1:   (1) Create a class in a package. Create an instance of your class outside of that package.
+// Exercise 1:  (1) Create a class in a package. Create an instance of your class outside of that package.
 
 // Exercise 2:  (1) Take the code fragments in this section and turn them into a program, and verify that collisions do
 //      in fact occur.
