@@ -1,50 +1,86 @@
 package chapter.four.excercises;
 
+import chapter.two.exercises.Dog;
+
 public class ExcercisesFour {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Throwable {
 // Exercise 1:   (1) Create a class containing an uninitialized String reference. Demonstrate that this reference is
 //      initialized by Java to null.
+
+        UninitializedString uninitializedString = new UninitializedString();
+        System.out.println(uninitializedString.string);
 
 // Exercise 2:  (2) Create a class with a String field that is initialized at the point of definition, and another one
 //      that is initialized by the constructor. What is the difference between the two approaches?
 
+        InitializedString initializedString = new InitializedString();
+        InitializedString initializedString1 = new InitializedString("constructed");
+
 // Exercise 3:  (1) Create a class with a default constructor (one that takes no arguments) that prints a message.
 //      Create an object of this class.
 
+        InitializedString initializedString2 = new InitializedString();
+
 // Exercise 4:  (1) Add an overloaded constructor to the previous exercise that takes a String argument and prints it
 //      along with your message.
+
+        InitializedString initializedString3 = new InitializedString("constructed");
 
 // Exercise 5:  (2) Create a class called Dog with an overloaded bark( ) method. This method should be overloaded based
 //      on various primitive data types, and print different types of barking, howling, etc., depending on which
 //      overloaded version is called. Write a main( ) that calls all the different versions.
 
+        Dog dog = new Dog("Sparky", "Meow");
+        dog.bark();
+        dog.bark("Woof");
+
 // Exercise 6:  (1) Modify the previous exercise so that two of the overloaded methods have two arguments
 //      (of two different types), but in reversed order relative to each other. Verify that this works.
 
+        dog.fetch(3, "sticks");
+        dog.fetch("sticks", 4);
+
 // Exercise 7:  (1) Create a class without a constructor, and then create an object of that class in main( ) to verify
 //      that the default constructor is automatically synthesized.
+
+        DefaultConstructor defaultConstructor = new DefaultConstructor();
 
 // Exercise 8:   (1) Create a class with two methods. Within the first method, call the second method twice: the first
 //      time without using this, and the second time using this—just to see it working; you should not use this form in
 //      practice.
 
+        Delegation delegation = new Delegation();
+        delegation.method1();
+
 // Exercise 9:  (1) Create a class with two (overloaded) constructors. Using this, call the second constructor inside
 //      the first one.
+
+        OverloadedConstructor overloadedConstructor = new OverloadedConstructor();
 
 // Exercise 10:    (2) Create a class with a finalize( ) method that prints a message. In main( ), create an
 //      object of your class. Explain the behavior of your program.
 
+        FinalizedClass finalizedClass = new FinalizedClass();
+
 // Exercise 11:    (4) Modify the previous exercise so that your finalize( ) will always be called.
 
 // Exercise 12:    (4) Create a class called Tank that can be filled and emptied, and has a termination condition that
-//      it must be empty when the object is cleaned up. Write a finalize( ) that verifies this termination condition.
+//      it must be releaseTank when the object is cleaned up. Write a finalize( ) that verifies this termination condition.
 //      In main( ), test the possible scenarios that can occur when your Tank is used.
+
+        Tank tank = new Tank();
+        System.gc();
+
+        tank.isEmpty();
+        tank.releaseTank();
 
 // Exercise 13:    (1) Verify the statements in the previous paragraph.
 
 // Exercise 14:    (1) Create a class with a static String field that is initialized at the point of definition, and
 //      another one that is initialized by the static block. Add a static method that prints both fields and
 //      demonstrates that they are both initialized before they are used.
+
+
 
 // Exercise 15:    (1) Create a class with a String that is initialized using instance initialization.
 
@@ -72,3 +108,5 @@ public class ExcercisesFour {
 
     }
 }
+
+
