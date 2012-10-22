@@ -2,6 +2,8 @@ package chapter.four.excercises;
 
 import chapter.two.exercises.Dog;
 
+import java.util.Arrays;
+
 public class ExcercisesFour {
     public static void main(String[] args) throws Throwable {
 // Exercise 1:   (1) Create a class containing an uninitialized String reference. Demonstrate that this reference is
@@ -91,14 +93,24 @@ public class ExcercisesFour {
 // Exercise 16:    (1) Create an array of String objects and assign a String to each element. Print the array by using
 //      a for loop.
 
-
+        String[] strings = {"string1","string2","string3","string4"};
+        for (String str : strings) {
+            System.out.println(str);
+        }
 
 // Exercise 17:    (2) Create a class with a constructor that takes a String argument. During construction, print the
 //      argument. Create an array of object references to this class, but don’t actually create objects to assign into
 //      the array. When you run the program, notice whether the initialization messages from the constructor calls are
 //      printed.
 
+        Messages one = null;
+        Messages two = null;
+        Messages[] messages = {one,two};
+
 // Exercise 18:    (1) Complete the previous exercise by creating objects to attach to the array of references.
+
+        messages[0] = new Messages("One");
+        messages[1] = new Messages("two");
 
 // Exercise 19:    (2) Write a method that takes a vararg String array. Verify that you can pass either a
 //      comma-separated list of Strings or a String[] into this method.
@@ -109,8 +121,23 @@ public class ExcercisesFour {
 // Exercise 21:    (1) Create an enum of the least-valuable six types of paper currency. Loop through the values( ) and
 //      print each value and its ordinal( ).
 
+        for (Money s : Money.values()) {
+            System.out.println(s + ", ordinal " + s.ordinal());
+        }
+
+        String[] st = {"a", "e", "i", "o", "u"};
+        for (String s : st) {
+            System.out.println(s + ", toUppercase " + s.toUpperCase());
+        }
+
+        System.out.println(Arrays.toString(st));
+
 // Exercise 22:   (2) Write a switch statement for the enum in the previous example. For each case, output a
 //      description of that particular currency.
+
+        for (Money m : Money.values()) {
+            m.choose(m);
+        }
 
     }
 }
