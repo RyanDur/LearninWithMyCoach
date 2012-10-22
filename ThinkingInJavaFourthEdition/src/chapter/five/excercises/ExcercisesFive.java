@@ -3,6 +3,7 @@ package chapter.five.excercises;
 import aclass.in.apackage.PackagedClass;
 import debug.Twin;
 import outside.apackage.AccessOutside;
+import protecteddata.ManipulateData;
 
 public class ExcercisesFive {
     public static void main(String[] args) {
@@ -40,6 +41,8 @@ public class ExcercisesFive {
 
 // Exercise 6:  (1) Create a class with protected data. Create a second class in the same file with a method that
 //      manipulates the protected data in the first class.
+
+        ManipulateData manipulateData = new ManipulateData();
 
 // Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
 //      a class that is not part of the access package.
