@@ -138,7 +138,6 @@ public class ExcercisesFour {
         for (Money m : Money.values()) {
             m.choose(m);
         }
-
     }
 }
 
