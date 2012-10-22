@@ -120,14 +120,40 @@ public class ExercisesTwo {
 //      operator to right shift through all of its binary positions, each time displaying the result using
 //      Integer.toBinaryString( ).
 
+        int h2 = -1;
+        System.out.println(Integer.toBinaryString(h2));
+        h2 <<= 10;
+        System.out.println(Integer.toBinaryString(h2));
+        for (int g = 0; g < 32; g++){
+            h2 >>>= 1;
+            System.out.println(Integer.toBinaryString(h2));
+        }
 // Exercise 13:    (1) Write a method that displays char values in binary form. Demonstrate it using several different
 //      characters.
-
+        char c = 'a';
+        System.out.println(Integer.toBinaryString(c));
+        c = 'b';
+        System.out.println(Integer.toBinaryString(c));
+        c = 'c';
+        System.out.println(Integer.toBinaryString(c));
+        c = 'd';
+        System.out.println(Integer.toBinaryString(c));
+        c +=1;
+        System.out.println(Integer.toBinaryString(c));
+        c = 'A';
+        System.out.println(Integer.toBinaryString(c));
+        for(int f = 0; f < 26; f++) {
+            c +=1;
+            System.out.println(Integer.toBinaryString(c));
+        }
 // Exercise 14:    (3) Write a method that takes two String arguments and uses all the boolean comparisons to compare
 //      the two Strings and print the results. For the == and !=, also perform the equals( ) test. In main( ), call
 //      your method with some different String objects.
 
+        CompareString compareString = new CompareString();
 
+        compareString.compare("a", "a");
+        compareString.compare("a", "b");
     }
 }
 
