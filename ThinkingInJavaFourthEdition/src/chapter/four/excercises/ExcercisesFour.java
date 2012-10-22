@@ -71,21 +71,27 @@ public class ExcercisesFour {
         Tank tank = new Tank();
         System.gc();
 
-        tank.isEmpty();
+        tank.empty();
         tank.releaseTank();
 
 // Exercise 13:    (1) Verify the statements in the previous paragraph.
+
+        System.out.println(tank.isEmpty());
 
 // Exercise 14:    (1) Create a class with a static String field that is initialized at the point of definition, and
 //      another one that is initialized by the static block. Add a static method that prints both fields and
 //      demonstrates that they are both initialized before they are used.
 
-
+        StaticTest.print();
 
 // Exercise 15:    (1) Create a class with a String that is initialized using instance initialization.
+        InitializedClass initializedClass = new InitializedClass();
+        System.out.println(initializedClass.string);
 
 // Exercise 16:    (1) Create an array of String objects and assign a String to each element. Print the array by using
 //      a for loop.
+
+
 
 // Exercise 17:    (2) Create a class with a constructor that takes a String argument. During construction, print the
 //      argument. Create an array of object references to this class, but don’t actually create objects to assign into
@@ -108,5 +114,6 @@ public class ExcercisesFour {
 
     }
 }
+
 
 

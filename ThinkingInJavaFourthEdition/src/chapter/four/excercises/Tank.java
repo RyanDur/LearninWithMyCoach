@@ -4,8 +4,12 @@ public class Tank {
 
     private boolean empty = false;
 
-    public void isEmpty() {
+    public void empty() {
         empty = true;
+    }
+
+    public boolean isEmpty() {
+        return empty;
     }
 
     public void releaseTank() throws Throwable {
