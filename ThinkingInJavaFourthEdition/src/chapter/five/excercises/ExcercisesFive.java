@@ -1,5 +1,6 @@
 package chapter.five.excercises;
 
+import access.Widget;
 import aclass.in.apackage.PackagedClass;
 import debug.Twin;
 import outside.apackage.AccessOutside;
@@ -47,13 +48,41 @@ public class ExcercisesFive {
 // Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
 //      a class that is not part of the access package.
 
+        Widget widget = new Widget();
+
 // Exercise 8:  (4) Following the form of the example Lunch.java, create a class called ConnectionManager that manages
 //      a fixed array of Connection objects. The client programmer must not be able to explicitly create Connection
 //      objects, but can only get them via a static method in ConnectionManager. When the ConnectionManager runs out of
 //      objects, it returns a null reference. Test the classes in main( ).
 
+        System.out.println(ConnectionManager.getConnection());
+        System.out.println(ConnectionManager.getConnection());
+        System.out.println(ConnectionManager.getConnection());
+        System.out.println(ConnectionManager.getConnection());
+
 // Exercise 9:  (2) Create the following file in the access/local directory (presumably in your CLASSPATH):
 
+//        // access/local/PackagedClass.java
+//        package access.local;
+//
+//        class PackagedClass {
+//            public PackagedClass() {
+//                System.out.println("Creating a packaged class");
+//            }
+//        }
+//
+//        Then create the following file in a directory other than access/local:
+//
+//// access/foreign/Foreign.java
+//        package access.foreign;
+//        import access.local.*;
+//
+//        public class access.foreign.Foreign {
+//            public static void main(String[] args) {
+//                PackagedClass pc = new PackagedClass();
+//            }
+//        }
 
     }
 }
+
