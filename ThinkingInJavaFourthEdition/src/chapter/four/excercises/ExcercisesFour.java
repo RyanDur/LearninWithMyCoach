@@ -167,11 +167,25 @@ public class ExcercisesFour {
         messages[0] = new Messages("One");
         messages[1] = new Messages("two");
 
-// Exercise 19:    (2) Write a method that takes a vararg String array. Verify that you can pass either a
-//      comma-separated list of Strings or a String[] into this method.
+        /**
+         * Exercise 19:    (2) Write a method that takes a vararg String array. Verify that you can pass either a
+         *      comma-separated list of Strings or a String[] into this method.
+         *
+         *      @see VarArgs
+         */
+        VarArgs varArgs = new VarArgs();
 
-// Exercise 20:   (1) Create a main( ) that uses varargs instead of the ordinary main( ) syntax. Print all the elements
-//      in the resulting args array. Test it with various numbers of command-line arguments.
+        varArgs.printVarargs(new String[]{"Three","Four","Five"});
+        String[] strings1 = new String[]{"Six","Seven","Eight"};
+        varArgs.printVarargs(strings1);
+
+        /**
+         * Exercise 20:   (1) Create a main( ) that uses varargs instead of the ordinary main( ) syntax. Print all the
+         *      elements in the resulting args array. Test it with various numbers of command-line arguments.
+         */
+        for (String string : args) {
+            System.out.println(string);
+        }
 
         /**
          * Exercise 21:    (1) Create an enum of the least-valuable six types of paper currency. Loop through the
