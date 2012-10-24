@@ -2,6 +2,10 @@ package chapter.two.exercises;
 
 import java.util.Random;
 
+/**
+ * Exercise 7:  (3) Write a program that simulates coin-flipping.
+ *      @see ExercisesTwo
+ */
 public class Coin {
     Random rn;
 

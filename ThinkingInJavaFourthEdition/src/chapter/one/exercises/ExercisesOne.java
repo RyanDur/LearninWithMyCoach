@@ -2,10 +2,10 @@ package chapter.one.exercises;
 
 import java.util.Date;
 
-class Incrementable {
-    static void increment() { ExercisesOne.i++; }
-}
-
+/**
+ * Exercise 6:  (2) Write a program that includes and calls the storage( ) method defined as a code fragment in
+ *      this chapter.
+ */
 public class ExercisesOne {
 
     int storage(String s) {
@@ -16,51 +16,38 @@ public class ExercisesOne {
 
     public static void main(String[] args) {
 
-// Exercise 1:   (2) Create a class containing an int and a char that are not initialized, and print their values
-//      to verify that Java performs default initialization.
-
-        class One {
-            int a;
-            char ch;
-        }
-
+        /**
+        * Exercise 1:   (2) Create a class containing an int and a char that are not initialized, and print their
+        *      values to verify that Java performs default initialization.
+        */
         One one = new One();
         System.out.println(one.a);
         System.out.println(one.ch);
 
-// Exercise 2:  (1) Following the HelloDate.java example in this chapter, create a hello, world program
-//      that simply displays that statement. You need only a single method in your class (the main one that gets
-//      executed when the program starts). Remember to make it static and to include the argument list, even though you
-//      do not use the argument list. Compile the program with javac and run it using java. If you are using a different
-//      development environment than the JDK, learn how to compile and run programs in that environment.
-
-        class HelloWorld {
-            public HelloWorld(int s) {
-                System.out.println("Hello World");
-            }
-        }
-
+        /**
+         * Exercise 2:  (1) Following the HelloDate.java example in this chapter, create a hello, world program that
+         *      simply displays that statement. You need only a single method in your class (the main one that gets
+         *      executed when the program starts). Remember to make it static and to include the argument list, even
+         *      though you do not use the argument list. Compile the program with javac and run it using java. If you
+         *      are using a different development environment than the JDK, learn how to compile and run programs in
+         *      that environment.
+         */
         HelloWorld helloWorld = new HelloWorld(4);
 
-// Exercise 3:  (1) Find the code fragments involving ATypeName and turn them into a program that compiles and runs.
-
-        class ATypeName { /* Class body goes here */ }
-
+        /**
+         * Exercise 3:  (1) Find the code fragments involving ATypeName and turn them into a program that compiles and runs.
+         */
         ATypeName a = new ATypeName();
 
-// Exercise 4:  (1) Turn the DataOnly code fragments into a program that compiles and runs.
-
-        class DataOnly {
-            int i;
-            double d;
-            boolean b;
-        }
-
+        /**
+         * Exercise 4:  (1) Turn the DataOnly code fragments into a program that compiles and runs.
+         */
         DataOnly data = new DataOnly();
 
-// Exercise 5:  (1) Modify the previous exercise so that the values of the data in DataOnly are assigned to and printed
-//      in main( ).
-
+        /**
+         * Exercise 5:  (1) Modify the previous exercise so that the values of the data in DataOnly are assigned to and
+         *      printed in main( ).
+         */
         data.i = 47;
         data.d = 1.1;
         data.b = false;
@@ -69,23 +56,26 @@ public class ExercisesOne {
         System.out.println(data.d);
         System.out.println(data.b);
 
-// Exercise 6:  (2) Write a program that includes and calls the storage( ) method defined as a code fragment in this
-//      chapter.
-
+        /**
+         * Exercise 6:  (2) Write a program that includes and calls the storage( ) method defined as a code fragment in
+         *      this chapter.
+         */
         ExercisesOne exercisesOne = new ExercisesOne();
         System.out.println(exercisesOne.storage("four"));
 
-// Exercise 7:  (1) Turn the Incrementable code fragments into a working program.
-
+        /**
+         * Exercise 7:  (1) Turn the Incrementable code fragments into a working program.
+         */
         Incrementable sf = new Incrementable();
         sf.increment();
         Incrementable.increment();
 
         System.out.println(ExercisesOne.i);
 
-// Exercise 8:  (3) Write a program that demonstrates that, no matter how many objects you create of a particular class,
-//      there is only one instance of a particular static field in that class.
-
+        /**
+         * Exercise 8:  (3) Write a program that demonstrates that, no matter how many objects you create of a
+         *      particular class, there is only one instance of a particular static field in that class.
+         */
         Incrementable sf1 = new Incrementable();
         sf1.increment();
         System.out.println(ExercisesOne.i);
@@ -95,9 +85,10 @@ public class ExercisesOne {
         sf3.increment();
         System.out.println(ExercisesOne.i);
 
-// Exercise 9:  (2) Write a program that demonstrates that autoboxing works for all the primitive types and their
-//      wrappers.
-
+        /**
+         * Exercise 9:  (2) Write a program that demonstrates that autoboxing works for all the primitive types and
+         *      their wrappers.
+         */
         int i = 1;
         Integer I;
         I = i;
@@ -138,30 +129,34 @@ public class ExercisesOne {
         D = d;
         System.out.println(D);
 
-// Exercise 10:    (2) Write a program that prints three arguments taken from the command line. To do this, you will need
-//      to index into the command-line array of Strings.
+        /**
+         * Exercise 10:    (2) Write a program that prints three arguments taken from the command line. To do this, you
+         *      will need to index into the command-line array of Strings.
+         */
 
-// Exercise 11:    (1) Turn the AllTheColorsOfTheRainbow example into a program that compiles and runs.
+        /**
+         * Exercise 11:    (1) Turn the AllTheColorsOfTheRainbow example into a program that compiles and runs.
+         */
 
-        class AllTheColorsOfTheRainbow {
-            int anIntegerRepresentingColors;
+        /**
+         * Exercise 13:    (1) Run Documentation1.java, Documentation2.java, and Documentation3.java through Javadoc.
+         *      Verify the resulting documentation with your Web browser.
+         */
 
-            void ChangeTheHueOfTheColor(int newHue) {
+        /**
+         * Exercise 14:    (1) Add an HTML list of items to the documentation in the previous exercise.
+         */
 
-            }
-        }
+        /**
+         * Exercise 15:    (1) Take the program in Exercise 2 and add comment documentation to it. Extract this comment
+         *      documentation into an HTML file using Javadoc and view it with your Web browser.
+         */
 
-// Exercise 13:    (1) Run Documentation1.java, Documentation2.java, and Documentation3.java through Javadoc. Verify the
-//      resulting documentation with your Web browser.
-
-// Exercise 14:    (1) Add an HTML list of items to the documentation in the previous exercise.
-
-// Exercise 15:    (1) Take the program in Exercise 2 and add comment documentation to it. Extract this comment
-//      documentation into an HTML file using Javadoc and view it with your Web browser.
-
-// Exercise 16:    (1) In the Initialization & Cleanup chapter, locate the Overloading.java example and add Javadoc
-//      documentation. Extract this comment documentation into an HTML file using Javadoc and view it with your Web
-//      browser.
+        /**
+         * Exercise 16:    (1) In the Initialization & Cleanup chapter, locate the Overloading.java example and add
+         *      Javadoc documentation. Extract this comment documentation into an HTML file using Javadoc and view it
+         *      with your Web  browser.
+         */
 
 
     }

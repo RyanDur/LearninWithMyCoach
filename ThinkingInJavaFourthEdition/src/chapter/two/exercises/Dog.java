@@ -1,5 +1,15 @@
 package chapter.two.exercises;
 
+/**
+ * Exercise 5:  (2) Create a class called Dog containing two Strings: name and says. In main( ), create two dog
+ *      objects with names spot (who says, Ruff!) and scruffy (who says, Wurf!). Then display their
+ *      names and what they say.
+ *
+ * Exercise 6:  (3) Following Exercise 5, create a new Dog reference and assign it to spots object. Test for
+ *      comparison\ using == and equals( ) for all references.
+ *
+ *      @see ExercisesTwo
+ */
 public class Dog {
     String name;
     String says;
