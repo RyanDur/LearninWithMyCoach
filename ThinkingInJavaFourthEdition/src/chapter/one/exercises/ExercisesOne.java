@@ -19,6 +19,8 @@ public class ExercisesOne {
         /**
         * Exercise 1:   (2) Create a class containing an int and a char that are not initialized, and print their
         *      values to verify that Java performs default initialization.
+        *
+        *      @see One
         */
         One one = new One();
         System.out.println(one.a);
@@ -31,22 +33,31 @@ public class ExercisesOne {
          *      though you do not use the argument list. Compile the program with javac and run it using java. If you
          *      are using a different development environment than the JDK, learn how to compile and run programs in
          *      that environment.
+         *
+         *      @see HelloWorld
          */
         HelloWorld helloWorld = new HelloWorld(4);
 
         /**
-         * Exercise 3:  (1) Find the code fragments involving ATypeName and turn them into a program that compiles and runs.
+         * Exercise 3:  (1) Find the code fragments involving ATypeName and turn them into a program that compiles and
+         *      runs.
+         *
+         *      @see ATypeName
          */
         ATypeName a = new ATypeName();
 
         /**
          * Exercise 4:  (1) Turn the DataOnly code fragments into a program that compiles and runs.
+         *
+         *      @see DataOnly
          */
         DataOnly data = new DataOnly();
 
         /**
          * Exercise 5:  (1) Modify the previous exercise so that the values of the data in DataOnly are assigned to and
          *      printed in main( ).
+         *
+         *      @see DataOnly
          */
         data.i = 47;
         data.d = 1.1;
@@ -59,12 +70,16 @@ public class ExercisesOne {
         /**
          * Exercise 6:  (2) Write a program that includes and calls the storage( ) method defined as a code fragment in
          *      this chapter.
+         *
+         *      @see ExercisesOne
          */
         ExercisesOne exercisesOne = new ExercisesOne();
         System.out.println(exercisesOne.storage("four"));
 
         /**
          * Exercise 7:  (1) Turn the Incrementable code fragments into a working program.
+         *
+         *      @see Incrementable
          */
         Incrementable sf = new Incrementable();
         sf.increment();
@@ -75,6 +90,8 @@ public class ExercisesOne {
         /**
          * Exercise 8:  (3) Write a program that demonstrates that, no matter how many objects you create of a
          *      particular class, there is only one instance of a particular static field in that class.
+         *
+         *      @see Incrementable
          */
         Incrementable sf1 = new Incrementable();
         sf1.increment();
