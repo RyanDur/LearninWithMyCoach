@@ -22,7 +22,6 @@ public class ExcercisesFive {
          *      static import line to import the class into a test program, and demonstrate the conditional compilation
          *      effect.
          */
-
         Twin twin = new Twin();
         twin.debug("string");
 
