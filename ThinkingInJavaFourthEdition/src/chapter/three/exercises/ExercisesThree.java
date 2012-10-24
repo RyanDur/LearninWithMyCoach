@@ -36,19 +36,20 @@ public class ExercisesThree {
         /**
          * Exercise 3:  (1) Modify Exercise 2 so that your code is surrounded by an 'infinite' while loop. It will then
          *      run until you interrupt it from the keyboard (typically by pressing Control-C).
+         *
+         * while (true) {
+         *     int num = rn.nextInt();
+         *     if (num > oldInt){
+         *         oldInt = num;
+         *         newInt = oldInt;
+         *         System.out.println(num + " greater than oldInt");
+         *     } else {
+         *         oldInt = newInt;
+         *         newInt = num;
+         *         System.out.println(num + " less than oldInt");
+         *     }
+         * }
          */
-//        while (true) {
-//            int num = rn.nextInt();
-//            if (num > oldInt){
-//                oldInt = num;
-//                newInt = oldInt;
-//                System.out.println(num + " greater than oldInt");
-//            } else {
-//                oldInt = newInt;
-//                newInt = num;
-//                System.out.println(num + " less than oldInt");
-//            }
-//        }
 
         /**
          * Exercise 4:  (3) Write a program that uses two nested for loops and the modulus operator (%) to detect and
@@ -87,12 +88,15 @@ public class ExercisesThree {
             }
         }
 
-//        for (int i = 1; i < 101; i++) {
-//            System.out.println(i);
-//            if (i == 99) {
-//                return;
-//            }
-//        }
+        /**
+         * for (int i = 1; i < 101; i++) {
+         *     System.out.println(i);
+         *     if (i == 99) {
+         *         return;
+         *     }
+         * }
+         */
+
 
         /**
          * Exercise 8:  (2) Create a switch statement that prints a message for each case, and put the switch inside a
