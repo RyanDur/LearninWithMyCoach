@@ -10,6 +10,8 @@ public class ExcercisesFive {
     public static void main(String[] args) {
         /**
          * Exercise 1:  (1) Create a class in a package. Create an instance of your class outside of that package.
+         *
+         *      @see PackagedClass
          */
         PackagedClass packagedClass = new PackagedClass();
 
@@ -21,6 +23,8 @@ public class ExcercisesFive {
          *      method. The first version displays its String argument to the console, the second does nothing. Use a
          *      static import line to import the class into a test program, and demonstrate the conditional compilation
          *      effect.
+         *
+         *      @see Twin
          */
         Twin twin = new Twin();
         twin.debug("string");
@@ -32,6 +36,9 @@ public class ExcercisesFive {
          *      members. Create an object of this class and see what kind of compiler messages you get when you try to
          *      access all the class members. Be aware that classes in the same directory are part of the default
          *      package.
+         *
+         *      @see Access
+         *      @see AccessOutside
          */
 
         Access access = new Access();
@@ -50,6 +57,9 @@ public class ExcercisesFive {
         /**
          * Exercise 6:  (1) Create a class with protected data. Create a second class in the same file with a method that
          *      manipulates the protected data in the first class.
+         *
+         *      @see ManipulateData
+         *      @see protecteddata.ProtectedData
          */
         ManipulateData manipulateData = new ManipulateData();
         System.out.println(manipulateData.getSring());
@@ -62,6 +72,8 @@ public class ExcercisesFive {
         /**
          * Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
          *      a class that is not part of the access package.
+         *
+         *      @see Widget
          */
         Widget widget = new Widget();
 
@@ -70,6 +82,7 @@ public class ExcercisesFive {
          *      manages a fixed array of Connection objects. The client programmer must not be able to explicitly
          *      create Connection objects, but can only get them via a static method in ConnectionManager. When the
          *      ConnectionManager runs out of objects, it returns a null reference. Test the classes in main( ).
+         *
          *      @see ConnectionManager
          *      @see Connection
          */
@@ -101,7 +114,11 @@ public class ExcercisesFive {
          *          }
          *      }
          *
-         *      Explain why the compiler generates an error. Would making the Foreign class part of the access.local package change anything?
+         *      Explain why the compiler generates an error. Would making the Foreign class part of the access.local
+         *      package change anything?
+         *
+         *      @see access.local.PackagedClass
+         *      @see access.foreign.Foreign
          */
 
 
