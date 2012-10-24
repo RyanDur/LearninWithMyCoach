@@ -2,12 +2,16 @@ package chapter.five.excercises;
 
 import access.Widget;
 import aclass.in.apackage.PackagedClass;
+//import static debug.*;
 import debug.Twin;
 import outside.apackage.AccessOutside;
 import protecteddata.ManipulateData;
+import protecteddata.ProtectedData;
 
 public class ExcercisesFive {
     public static void main(String[] args) {
+        ProtectedData protectedData = new ProtectedData();
+        ManipulateData manipulateData = new ManipulateData();
         /**
          * Exercise 1:  (1) Create a class in a package. Create an instance of your class outside of that package.
          *
@@ -15,8 +19,13 @@ public class ExcercisesFive {
          */
         PackagedClass packagedClass = new PackagedClass();
 
-// Exercise 2:  (1) Take the code fragments in this section and turn them into a program, and verify that collisions do
-//      in fact occur.
+        /**
+         * Exercise 2:  (1) Take the code fragments in this section and turn them into a program, and verify that
+         *      collisions do in fact occur.
+         *
+         *      @see debug.Twin
+         *      @see debugoff.Twin
+         */
 
         /**
          * Exercise 3:  (2) Create two packages: debug and debugoff, containing an identical class with a debug( )
@@ -24,12 +33,19 @@ public class ExcercisesFive {
          *      static import line to import the class into a test program, and demonstrate the conditional compilation
          *      effect.
          *
-         *      @see Twin
+         *      @see debug.Twin
+         *      @see debugoff.Twin
          */
         Twin twin = new Twin();
         twin.debug("string");
 
-// Exercise 4:  (2) Show that protected methods have package access but are not public.
+        /**
+         * Exercise 4:  (2) Show that protected methods have package access but are not public.
+         *
+         *      @see protecteddata.ProtectedData
+         *      @see ManipulateData
+         */
+        System.out.println(manipulateData.getK());
 
         /**
          * Exercise 5:  (2) Create a class with public, private, protected, and package-access fields and method
@@ -61,7 +77,6 @@ public class ExcercisesFive {
          *      @see ManipulateData
          *      @see protecteddata.ProtectedData
          */
-        ManipulateData manipulateData = new ManipulateData();
         System.out.println(manipulateData.getSring());
         System.out.println(manipulateData.getInt());
         manipulateData.setString("New String");

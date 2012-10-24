@@ -23,4 +23,8 @@ public class ManipulateData extends ProtectedData{
     public int getInt() {
         return i;
     }
+
+    public int getK() {
+        return k;
+    }
 }

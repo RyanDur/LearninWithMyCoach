@@ -9,4 +9,7 @@ public class ProtectedData {
 
     protected String string = "old string";
     protected int i = 1;
+
+
+    int k;
 }
