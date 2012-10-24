@@ -8,8 +8,9 @@ import protecteddata.ManipulateData;
 
 public class ExcercisesFive {
     public static void main(String[] args) {
-// Exercise 1:  (1) Create a class in a package. Create an instance of your class outside of that package.
-
+        /**
+         * Exercise 1:  (1) Create a class in a package. Create an instance of your class outside of that package.
+         */
         PackagedClass packagedClass = new PackagedClass();
 
 // Exercise 2:  (1) Take the code fragments in this section and turn them into a program, and verify that collisions do
@@ -59,9 +60,10 @@ public class ExcercisesFive {
         System.out.println(manipulateData.getSring());
         System.out.println(manipulateData.getInt());
 
-// Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
-//      a class that is not part of the access package.
-
+        /**
+         * Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
+         *      a class that is not part of the access package.
+         */
         Widget widget = new Widget();
 
         /**

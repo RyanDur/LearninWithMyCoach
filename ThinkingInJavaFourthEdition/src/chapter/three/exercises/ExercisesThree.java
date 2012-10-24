@@ -30,7 +30,7 @@ public class ExercisesThree {
             }
         }
 
-// Exercise 3:  (1) Modify Exercise 2 so that your code is surrounded by an “infinite” while loop. It will then run
+// Exercise 3:  (1) Modify Exercise 2 so that your code is surrounded by an 'infinite' while loop. It will then run
 //      until you interrupt it from the keyboard (typically by pressing Control-C).
 
 //        while (true) {
