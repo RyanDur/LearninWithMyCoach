@@ -15,18 +15,24 @@ public class ExcercisesFive {
 // Exercise 2:  (1) Take the code fragments in this section and turn them into a program, and verify that collisions do
 //      in fact occur.
 
-// Exercise 3:  (2) Create two packages: debug and debugoff, containing an identical class with a debug( ) method. The
-//      first version displays its String argument to the console, the second does nothing. Use a static import line to
-//      import the class into a test program, and demonstrate the conditional compilation effect.
+        /**
+         * Exercise 3:  (2) Create two packages: debug and debugoff, containing an identical class with a debug( )
+         *      method. The first version displays its String argument to the console, the second does nothing. Use a
+         *      static import line to import the class into a test program, and demonstrate the conditional compilation
+         *      effect.
+         */
 
         Twin twin = new Twin();
         twin.debug("string");
 
 // Exercise 4:  (2) Show that protected methods have package access but are not public.
 
-// Exercise 5:  (2) Create a class with public, private, protected, and package-access fields and method members.
-//      Create an object of this class and see what kind of compiler messages you get when you try to access all the
-//      class members. Be aware that classes in the same directory are part of the default package.
+        /**
+         * Exercise 5:  (2) Create a class with public, private, protected, and package-access fields and method
+         *      members. Create an object of this class and see what kind of compiler messages you get when you try to
+         *      access all the class members. Be aware that classes in the same directory are part of the default
+         *      package.
+         */
 
         Access access = new Access();
         System.out.println(access.a);
@@ -40,10 +46,18 @@ public class ExcercisesFive {
 //        System.out.println(accessOutside.c);
 //        System.out.println(access.d);
 
-// Exercise 6:  (1) Create a class with protected data. Create a second class in the same file with a method that
-//      manipulates the protected data in the first class.
 
+        /**
+         * Exercise 6:  (1) Create a class with protected data. Create a second class in the same file with a method that
+         *      manipulates the protected data in the first class.
+         */
         ManipulateData manipulateData = new ManipulateData();
+        System.out.println(manipulateData.getSring());
+        System.out.println(manipulateData.getInt());
+        manipulateData.setString("New String");
+        manipulateData.setInt(2);
+        System.out.println(manipulateData.getSring());
+        System.out.println(manipulateData.getInt());
 
 // Exercise 7:  (1) Create the library according to the code fragments describing access and Widget. Create a Widget in
 //      a class that is not part of the access package.
@@ -63,28 +77,32 @@ public class ExcercisesFive {
         System.out.println(ConnectionManager.getConnection());
         System.out.println(ConnectionManager.getConnection());
 
-// Exercise 9:  (2) Create the following file in the access/local directory (presumably in your CLASSPATH):
+        /**
+         *Exercise 9:  (2) Create the following file in the access/local directory (presumably in your CLASSPATH):
+         *      access/local/PackagedClass.java
+         *      package access.local;
+         *
+         *      class PackagedClass {
+         *          public PackagedClass() {
+         *              System.out.println("Creating a packaged class");
+         *          }
+         *      }
+         *
+         *      Then create the following file in a directory other than access/local:
+         *
+         *      access/foreign/Foreign.java
+         *      package access.foreign;
+         *      import access.local.*;
+         *
+         *      public class Foreign {
+         *          public static void main(String[] args) {
+         *              PackagedClass pc = new PackagedClass();
+         *          }
+         *      }
+         *
+         *      Explain why the compiler generates an error. Would making the Foreign class part of the access.local package change anything?
+         */
 
-//        // access/local/PackagedClass.java
-//        package access.local;
-//
-//        class PackagedClass {
-//            public PackagedClass() {
-//                System.out.println("Creating a packaged class");
-//            }
-//        }
-//
-//        Then create the following file in a directory other than access/local:
-//
-//// access/foreign/Foreign.java
-//        package access.foreign;
-//        import access.local.*;
-//
-//        public class access.foreign.Foreign {
-//            public static void main(String[] args) {
-//                PackagedClass pc = new PackagedClass();
-//            }
-//        }
 
     }
 }

@@ -1,11 +1,26 @@
 package protecteddata;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Thoughtworks
- * Date: 10/21/12
- * Time: 11:31 PM
- * To change this template use File | Settings | File Templates.
+ * Exercise 6:  (1) Create a second class in the same file with a method that manipulates the protected data in the
+ *      first class.
+ *      @see chapter.five.excercises.ExcercisesFive
+ *      @see ProtectedData
  */
-public class ManipulateData {
+public class ManipulateData extends ProtectedData{
+
+
+    public void setString(String string) {
+        this.string = string;
+    }
+
+    public String getSring() {
+        return string;
+    }
+
+    public void setInt(int i) {
+        this.i = i;
+    }
+    public int getInt() {
+        return i;
+    }
 }
