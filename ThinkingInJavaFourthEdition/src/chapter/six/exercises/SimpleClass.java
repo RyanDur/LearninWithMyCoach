@@ -13,5 +13,10 @@ public class SimpleClass {
 
     public SimpleClass() {
         lazyClass = new LazyClass();
+        System.out.println(lazyClass + " has been created inside " + this);
+    }
+
+    public String toString() {
+        return "SimpleClass";
     }
 }

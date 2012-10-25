@@ -8,4 +8,8 @@ package chapter.six.exercises;
  *      @see ExercisesSix
  */
 public class LazyClass {
+
+    public String toString() {
+        return "LazyClass";
+    }
 }
