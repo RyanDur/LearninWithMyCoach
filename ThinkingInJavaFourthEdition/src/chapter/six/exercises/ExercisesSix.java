@@ -30,15 +30,27 @@ public class ExercisesSix {
         tide.sterilize();
         System.out.println(tide);
 
-//        Exercise 3:  (2) Prove the previous sentence.
-//
+        /**
+         * ...construction happens from the base “outward,” so the base class is initialized before the derived-class
+         *      constructors can access it. Even if you don’t create a constructor for Cartoon( ), the compiler will
+         *      synthesize a default constructor for you that calls the base-class constructor.
+         *
+         * Exercise 3:  (2) Prove the previous sentence.
+         *
+         *      @see Cartoon
+         *      @see Drawing
+         *      @see Art
+         */
+        Cartoon cartoon = new Cartoon();
+
 //        Exercise 4:  (2) Prove that base-class constructors are (a) always called and (b) called before derived-class
 //              constructors.
-//
+
 //        Exercise 5:  (1) Create two classes, A and B, with default constructors (empty argument lists) that announce
 //              themselves. Inherit a new class called C from A, and create a member of class B inside C. Do not create
 //              a constructor for C. Create an object of class C and observe the results.
 
     }
 }
+
 
