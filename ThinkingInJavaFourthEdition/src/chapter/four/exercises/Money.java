@@ -1,10 +1,10 @@
-package chapter.four.excercises;
+package chapter.four.exercises;
 
 /**
  * Exercise 21:    (1) Create an enum of the least-valuable six types of paper currency. Loop through the
  *      values( ) and print each value and its ordinal( ).
  *
- *      @see ExcercisesFour
+ *      @see ExercisesFour
  */
 public enum Money {
     ONE_DOLLAR, TWO_DOLLAR, FIVE_DOLLAR, TEN_DOLLAR, TWENTY_DOLLAR;

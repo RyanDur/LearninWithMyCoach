@@ -1,4 +1,4 @@
-package chapter.four.excercises;
+package chapter.four.exercises;
 
 /**
  * Exercise 17:    (2) Create a class with a constructor that takes a String argument. During construction,
@@ -6,7 +6,7 @@ package chapter.four.excercises;
  *      objects to assign into the array. When you run the program, notice whether the initialization messages
  *      from the constructor calls are printed.
  *
- *      @see ExcercisesFour
+ *      @see ExercisesFour
  */
 public class Messages {
 
@@ -15,7 +15,7 @@ public class Messages {
      *      print the argument.
      *
      * @param string
-     * @see ExcercisesFour
+     * @see ExercisesFour
      */
     public Messages(String string) {
         System.out.println(string);

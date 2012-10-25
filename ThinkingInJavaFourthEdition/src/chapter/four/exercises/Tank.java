@@ -1,4 +1,4 @@
-package chapter.four.excercises;
+package chapter.four.exercises;
 
 /**
  * Exercise 12:    (4) Create a class called Tank that can be filled and emptied, and has a termination
@@ -6,7 +6,7 @@ package chapter.four.excercises;
  *      this termination condition. In main( ), test the possible scenarios that can occur when your Tank is
  *      used.
  *
- *      @see ExcercisesFour
+ *      @see ExercisesFour
  */
 public class Tank {
 
@@ -19,7 +19,7 @@ public class Tank {
     /**
      * Exercise 13:    (1) Verify the statements in the previous paragraph.
      *
-     * @see ExcercisesFour
+     * @see ExercisesFour
      */
     public boolean isEmpty() {
         return empty;
@@ -28,7 +28,7 @@ public class Tank {
     /**
      * ...and has a termination condition that it must be releaseTank when the object is cleaned up.
      *
-     * @see ExcercisesFour
+     * @see ExercisesFour
      */
     public void releaseTank() throws Throwable {
         this.finalize();
@@ -38,7 +38,7 @@ public class Tank {
      * Write a finalize( ) that verifies this termination condition.
      *
      * @throws Throwable
-     * @see ExcercisesFour
+     * @see ExercisesFour
      */
     protected void finalize() throws Throwable {
         if (empty) {

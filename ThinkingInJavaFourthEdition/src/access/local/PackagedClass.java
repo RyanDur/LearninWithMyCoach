@@ -25,7 +25,7 @@ package access.local;
  *
  *      Explain why the compiler generates an error. Would making the Foreign class part of the access.local package change anything?
  *
- *      @see chapter.five.excercises.ExcercisesFive
+ *      @see chapter.five.exercises.ExercisesFive
  *      @see access.foreign.Foreign
  */
 public class PackagedClass {

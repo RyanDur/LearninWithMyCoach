@@ -2,7 +2,7 @@ package protecteddata;
 
 /**
  * Exercise 6:  (1) Create a class with protected data.
- *      @see chapter.five.excercises.ExcercisesFive
+ *      @see chapter.five.exercises.ExercisesFive
  *      @see ManipulateData
  */
 public class ProtectedData {

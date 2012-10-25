@@ -1,4 +1,4 @@
-package chapter.five.excercises;
+package chapter.five.exercises;
 
 
 /**
@@ -6,7 +6,7 @@ package chapter.five.excercises;
  *      manages a fixed array of Connection objects. The client programmer must not be able to explicitly
  *      create Connection objects, but can only get them via a static method in ConnectionManager. When the
  *      ConnectionManager runs out of objects, it returns a null reference. Test the classes in main( ).
- *      @see ExcercisesFive
+ *      @see ExercisesFive
  *      @see Connection
  */
 public class ConnectionManager {

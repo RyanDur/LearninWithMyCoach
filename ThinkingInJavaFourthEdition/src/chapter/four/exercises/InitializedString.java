@@ -1,4 +1,4 @@
-package chapter.four.excercises;
+package chapter.four.exercises;
 
 /**
  * Exercise 2:  (2) Create a class with a String field that is initialized at the point of definition, and
@@ -7,7 +7,7 @@ package chapter.four.excercises;
  * Exercise 3:  (1) Create a class with a default constructor (one that takes no arguments) that prints a
  *      message. Create an object of this class.
  *
- *      @see ExcercisesFour
+ *      @see ExercisesFour
  */
 public class InitializedString {
     String string = "default";

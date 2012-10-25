@@ -1,10 +1,10 @@
-package chapter.four.excercises;
+package chapter.four.exercises;
 
 /**
  * Exercise 1:   (1) Create a class containing an uninitialized String reference. Demonstrate that this
  *      reference is initialized by Java to null.
  *
- *      @see ExcercisesFour
+ *      @see ExercisesFour
  */
 public class UninitializedString {
 
