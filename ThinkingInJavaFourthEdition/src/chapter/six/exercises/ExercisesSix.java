@@ -43,8 +43,14 @@ public class ExercisesSix {
          */
         Cartoon cartoon = new Cartoon();
 
-//        Exercise 4:  (2) Prove that base-class constructors are (a) always called and (b) called before derived-class
-//              constructors.
+        /**
+         * Exercise 4:  (2) Prove that base-class constructors are (a) always called and (b) called before
+         *      derived-class constructors.
+         *
+         *      @see Cartoon
+         *      @see Drawing
+         *      @see Art
+         */
 
 //        Exercise 5:  (1) Create two classes, A and B, with default constructors (empty argument lists) that announce
 //              themselves. Inherit a new class called C from A, and create a member of class B inside C. Do not create
