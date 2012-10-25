@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 import sun.security.util.BigInt;
 
@@ -24,7 +25,7 @@ public class WeakPointTest {
         point1.setLocation(2,2);
         System.out.println(point1);
         System.out.println(weakPoint.getPoint());
-        assertTrue(point1.equals(weakPoint.getPoint()));
+        Assert.assertTrue(point1.equals(weakPoint.getPoint()));
 
         System.out.println(p);
         System.out.println(new BigInteger(p));

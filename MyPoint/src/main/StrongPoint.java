@@ -2,8 +2,8 @@ import java.awt.*;
 
 
 public final class StrongPoint implements ThePoint {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public StrongPoint(int x, int y) {
         this.x = x;
