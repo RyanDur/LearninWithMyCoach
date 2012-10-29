@@ -69,6 +69,9 @@ public class ExercisesSix {
      *              <li>Exercise 13:    (2) Create a class with a method that is overloaded three times. Inherit a new
      *                  class, add a new overloading of the method, and show that all four methods are available in the
      *                  derived class.</li>
+     *
+     *              <li>Exercise 14:    (1) In Car.java add a service( ) method to Engine and call this method in
+     *                  main( ).</li>
      *         </ol>
      *     </body>
      * </html>
@@ -213,7 +216,20 @@ public class ExercisesSix {
         OverLoaded overLoaded = new OverLoaded();
         InheritOverLoaded inheritOverLoaded = new InheritOverLoaded();
 //        inheritOverLoaded
+
+        /**
+         * Exercise 14:    (1) In Car.java add a service( ) method to Engine and call this method in main( ).
+         *
+         *      @see Car
+         *      @see Door
+         *      @see Window
+         *      @see Wheel
+         *      @see Engine
+         */
+        Car car = new Car();
+        car.left.window.rollup();
+        car.wheel[0].inflate(72);
+        car.engine.changeOil();
     }
 }
-
 
