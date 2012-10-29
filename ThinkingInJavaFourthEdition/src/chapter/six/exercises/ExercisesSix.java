@@ -65,6 +65,10 @@ public class ExercisesSix {
      *
      *              <li>Exercise 12:    (3) Add a proper hierarchy of dispose( ) methods to all the classes in
      *                  Exercise 9.</li>
+     *
+     *              <li>Exercise 13:    (2) Create a class with a method that is overloaded three times. Inherit a new
+     *                  class, add a new overloading of the method, and show that all four methods are available in the
+     *                  derived class.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -206,7 +210,6 @@ public class ExercisesSix {
          *      @see OverLoaded
          *      @see InheritOverLoaded
          */
-
         OverLoaded overLoaded = new OverLoaded();
         InheritOverLoaded inheritOverLoaded = new InheritOverLoaded();
 //        inheritOverLoaded
