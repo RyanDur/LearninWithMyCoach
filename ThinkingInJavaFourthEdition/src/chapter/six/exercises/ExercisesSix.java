@@ -1,6 +1,7 @@
 package chapter.six.exercises;
 
 
+import chapter.six.exercises.protectedpackage.AClass;
 import sun.java2d.pipe.SpanShapeRenderer;
 
 public class ExercisesSix {
@@ -71,6 +72,19 @@ public class ExercisesSix {
      *                  derived class.</li>
      *
      *              <li>Exercise 14:    (1) In Car.java add a service( ) method to Engine and call this method in
+     *                  main( ).</li>
+     *
+     *              <li>Exercise 15:    (2) Create a class inside a package. Your class should contain a protected
+     *                  method. Outside of the package, try to call the protected method and explain the results.
+     *                  Now inherit from your class and call the protected method from inside a method of your
+     *                  derived class.</li>
+     *
+     *              <li>Exercise 16:    (2) Create a class called Amphibian. From this, inherit a class called Frog.
+     *                  Put appropriate methods in the base class. In main( ), create a Frog and upcast it to
+     *                  Amphibian, and demonstrate that all the methods still work.</li>
+     *
+     *              <li>Exercise 17:    (1) Modify Exercise 16 so that Frog overrides the method definitions from the
+     *                  base class (provides new definitions using the same method signatures). Note what happens in
      *                  main( ).</li>
      *         </ol>
      *     </body>
@@ -230,6 +244,42 @@ public class ExercisesSix {
         car.left.window.rollup();
         car.wheel[0].inflate(72);
         car.engine.changeOil();
+
+        /**
+        * Exercise 15:    (2) Create a class inside a package. Your class should contain a protected method. Outside of
+        *       the package, try to call the protected method and explain the results. Now inherit from your class and
+        *       call the protected method from inside a method of your derived class.
+        *
+        *       @see AClass
+        *       @see AnotherClass
+        */
+        AClass aClass = new AClass();
+        AnotherClass anotherClass = new AnotherClass();
+//        aClass.protectedMethod();
+        anotherClass.callProtectedMethod();
+
+        /**
+         * Exercise 16:    (2) Create a class called Amphibian. From this, inherit a class called Frog. Put appropriate
+         *      methods in the base class. In main( ), create a Frog and upcast it to Amphibian, and demonstrate that
+         *      all the methods still work.
+         *
+         *      @see Amphibian
+         *      @see Frog
+         */
+        Amphibian amphibian = new Amphibian();
+        Frog frog = new Frog();
+        frog.print(frog);
+        amphibian.print(frog);
+
+        /**
+         * Exercise 17:    (1) Modify Exercise 16 so that Frog overrides the method definitions from the base class
+         *      (provides new definitions using the same method signatures). Note what happens in main( ).
+         *
+         *      @see Amphibian
+         *      @see Frog
+         */
+        amphibian.method();
+        frog.method();
     }
 }
 
