@@ -8,11 +8,35 @@ package chapter.six.exercises;
  *      @see Tide
  *      @see Cleanser
  */
-public class Detergent extends Cleanser {
+public class Detergent {
+
+    /**
+     * Exercise 11:    (3) Modify Detergent.java so that it uses delegation.
+     *
+     *      @see ExercisesSix
+     */
+    Cleanser cleanser = new Cleanser();
+
+    @Override
+    public String toString() {
+        return cleanser.toString();
+    }
 
     public void scrub() {
         append(" Detergent.scrub()");
-        super.scrub();
+        cleanser.scrub();
+    }
+
+    public void apply() {
+        cleanser.apply();
+    }
+
+    public void dilute() {
+        cleanser.dilute();
+    }
+
+    public void append(String a) {
+        cleanser.append(a);
     }
 
     public void foam() {

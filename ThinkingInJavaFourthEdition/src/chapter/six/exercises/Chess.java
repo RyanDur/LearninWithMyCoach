@@ -1,7 +1,7 @@
 package chapter.six.exercises;
 
 /**
- * If you don’t call the base-class constructor in BoardGame( ), the compiler will complain that it can’t find
+ * If you do not call the base-class constructor in BoardGame( ), the compiler will complain that it can not find
  *      a constructor of the form Game( ). In addition, the call to the base-class constructor must be the first
  *      thing you do in the derived-class constructor. (The compiler will remind you if you get it wrong.)
  *
