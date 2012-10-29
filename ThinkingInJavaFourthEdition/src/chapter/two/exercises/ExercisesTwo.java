@@ -2,18 +2,25 @@ package chapter.two.exercises;
 
 import java.util.Random;
 
-/**
- * Exercise 3:  (1) Create a class containing a float and use it to demonstrate aliasing during method calls.
- *      @see ExercisesTwo
- */
-class Letter {
-    char c;
-}
-
 public class ExercisesTwo {
     static void f(Letter y) {
         y.c = 'z';
     }
+    /**
+     * <html>
+     *     <head>
+     *         <style TYPE="text/css">
+     *             li {margin-bottom:2em;}
+     *         </style>
+     *     </head>
+     *     <body>
+     *         <ol>
+     *
+     *         </ol>
+     *     </body>
+     * </html>
+     *
+     */
     public static void main(String[] args) {
 
         /**
