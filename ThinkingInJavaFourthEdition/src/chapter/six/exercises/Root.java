@@ -33,12 +33,13 @@ public class Root {
     /**
      * Exercise 12:    (3) Add a proper hierarchy of dispose( ) methods to all the classes in Exercise 9.
      *
-     *      @see ExercisesSix
+     *      @see Stem
      */
     protected void dispose(){
-        System.out.println(this);
+        System.out.println("Disposing of Root");
     }
 
+    @Override
     public String toString() {
         return "Root";
     }

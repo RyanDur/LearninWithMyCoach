@@ -30,4 +30,18 @@ public class Stem extends Root {
         super("Root");
         System.out.println(string);
     }
+
+    /**
+     * Exercise 12:    (3) Add a proper hierarchy of dispose( ) methods to all the classes in Exercise 9.
+     *
+     *      @see Root
+     */
+    public void dispose() {
+        System.out.println("Disposing of " + this);
+        super.dispose();
+    }
+
+    public String toString() {
+        return "Stem";
+    }
 }
