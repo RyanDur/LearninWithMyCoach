@@ -2,7 +2,6 @@ package chapter.six.exercises;
 
 
 import chapter.six.exercises.protectedpackage.AClass;
-import sun.java2d.pipe.SpanShapeRenderer;
 
 public class ExercisesSix {
     /**
@@ -308,9 +307,14 @@ public class ExercisesSix {
         System.out.println(ExercisesSix.ONE);
         System.out.println(exercisesSix.TWO);
 
-//        Exercise 19:    (2) Create a class with a blank final reference to an object. Perform the initialization of
-//              the blank final inside all constructors. Demonstrate the guarantee that the final must be initialized
-//              before use, and that it cannot be changed once initialized.
+        /**
+         * Exercise 19:    (2) Create a class with a blank final reference to an object. Perform the initialization of
+         *      the blank final inside all constructors. Demonstrate the guarantee that the final must be initialized
+         *      before use, and that it cannot be changed once initialized.
+         *
+         *      @see BlankFinal
+         */
+        BlankFinal blankFinal = new BlankFinal(frog);
     }
 }
 
