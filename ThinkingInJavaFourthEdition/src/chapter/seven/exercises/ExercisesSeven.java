@@ -27,6 +27,25 @@ public class ExercisesSeven {
      *
      *             <li>Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the
      *             number of wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.</li>
+     *
+     *             <li>Exercise 6:  (1) Change Music3.java so that what( ) becomes the root Object method toString( ).
+     *             Try printing the Instrument objects using System.out.println( ) (without any casting).</li>
+     *
+     *             <li>Exercise 7:  (2) Add a new type of Instrument to Music3.java and verify that polymorphism works
+     *             for your new type.</li>
+     *
+     *             <li>Exercise 8:  (2) Modify Music3.java so that it randomly creates Instrument objects the way
+     *             Shapes.java does.</li>
+     *
+     *             <li>Exercise 9:  (3) Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster, etc. In the
+     *             base class, provide methods that are common to all Rodents, and override these in the derived
+     *             classes to perform different behaviors depending on the specific type of Rodent. Create an array of
+     *             Rodent, fill it with different specific types of Rodents, and call your base-class methods to see
+     *             what happens.</li>
+     *
+     *             <li>Exercise 10:    (3) Create a base class with two methods. In the first method, call the second
+     *             method. Inherit a class and override the second method. Create an object of the derived class,
+     *             upcast it to the base type, and call the first method. Explain what happens.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -71,14 +90,14 @@ public class ExercisesSeven {
         }
 
         /**
-         *   Exercise 3:  (1) Add a new method in the base class of Shapes.java that prints a message, but do not
-         *        override it in the derived classes. Explain what happens. Now override it in one of the derived
-         *        classes but not the others, and see what happens. Finally, override it in all the derived classes.
+         * Exercise 3:  (1) Add a new method in the base class of Shapes.java that prints a message, but do not
+         *      override it in the derived classes. Explain what happens. Now override it in one of the derived
+         *      classes but not the others, and see what happens. Finally, override it in all the derived classes.
          *
-         *        @see Shape
-         *        @see Circle
-         *        @see Square
-         *        @see Triangle
+         *      @see Shape
+         *      @see Circle
+         *      @see Square
+         *      @see Triangle
          */
 
         /**
@@ -90,8 +109,62 @@ public class ExercisesSeven {
         Shape octagon = new Octagon();
         System.out.println(octagon);
 
-//        Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
-//              wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
+        /**
+         * Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
+         *      wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
+         *
+         *      @see Cycle
+         *      @see Tricycle
+         *      @see UniCycle
+         */
+
+        /**
+         * Exercise 6:  (1) Change Music3.java so that what( ) becomes the root Object method toString( ). Try printing
+         *      the Instrument objects using System.out.println( ) (without any casting).
+         *
+         *      @see Wind
+         *      @see Percussion
+         *      @see Stringed
+         *      @see Brass
+         *      @see Woodwind
+         */
+        Instrument[] orchestra = {
+                new Wind(),
+                new Percussion(),
+                new Stringed(),
+                new Brass(),
+                new Woodwind(),
+                new Reed()
+        };
+        Music3.tuneAll(orchestra);
+        for (Instrument instrument : orchestra) {
+            System.out.println(instrument.what());
+        }
+
+        /**
+         * Exercise 7:  (2) Add a new type of Instrument to Music3.java and verify that polymorphism works for your new
+         *      type.
+         *
+         *      @see Reed
+         */
+
+        /**
+         * Exercise 8:  (2) Modify Music3.java so that it randomly creates Instrument objects the way Shapes.java does.
+         */
+        Instrument[] instruments = new Instrument[9];
+        for(int i = 0; i < s.length; i++) {
+            instruments[i] = Instruments.instrumentGenerator.next();
+            System.out.println(instruments[i]);
+        }
+
+//        Exercise 9:  (3) Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster, etc. In the base class,
+//              provide methods that are common to all Rodents, and override these in the derived classes to perform
+//              different behaviors depending on the specific type of Rodent. Create an array of Rodent, fill it with
+//              different specific types of Rodents, and call your base-class methods to see what happens.
+
+//        Exercise 10:    (3) Create a base class with two methods. In the first method, call the second method.
+//              Inherit a class and override the second method. Create an object of the derived class, upcast it to
+//              the base type, and call the first method. Explain what happens.
     }
 }
 

@@ -10,7 +10,20 @@ package chapter.seven.exercises;
  */
 public class Cycle {
 
+    /**
+     * Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
+     *      wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
+     *
+     *      @see ExercisesSeven
+     *      @see Tricycle
+     *      @see UniCycle
+     */
     public void ride(Cycle cycle) {
         System.out.println("I am riding a " + cycle);
+        System.out.println("The number of wheels it has is " + cycle.wheels());
+    }
+
+    public int wheels() {
+        return 0;
     }
 }

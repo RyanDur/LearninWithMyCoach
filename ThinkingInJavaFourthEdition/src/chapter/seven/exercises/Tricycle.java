@@ -13,4 +13,16 @@ public class Tricycle extends Cycle {
     public String toString() {
         return "Tricycle";
     }
+
+    /**
+     * Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
+     *      wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
+     *
+     *      @see Cycle
+     *      @see ExercisesSeven
+     *      @see UniCycle
+     */
+    public int wheels() {
+        return 3;
+    }
 }
