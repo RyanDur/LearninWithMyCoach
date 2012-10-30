@@ -6,6 +6,15 @@ import sun.java2d.pipe.SpanShapeRenderer;
 
 public class ExercisesSix {
     /**
+     * Exercise 18:    (2) Create a class with a static final field and a final field and demonstrate the
+     *      difference between the two.
+     *
+     *      @see ExercisesSix
+     */
+    static final int ONE = 1;
+    final int TWO = 2;
+
+    /**
      * <html>
      *     <head>
      *         <style TYPE="text/css">
@@ -86,6 +95,13 @@ public class ExercisesSix {
      *              <li>Exercise 17:    (1) Modify Exercise 16 so that Frog overrides the method definitions from the
      *                  base class (provides new definitions using the same method signatures). Note what happens in
      *                  main( ).</li>
+     *
+     *              <li>Exercise 18:    (2) Create a class with a static final field and a final field and demonstrate
+     *                  the difference between the two.</li>
+     *
+     *              <li>Exercise 19:    (2) Create a class with a blank final reference to an object. Perform the
+     *                  initialization of the blank final inside all constructors. Demonstrate the guarantee that the
+     *                  final must be initialized before use, and that it cannot be changed once initialized.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -280,6 +296,21 @@ public class ExercisesSix {
          */
         amphibian.method();
         frog.method();
+
+
+        /**
+         * Exercise 18:    (2) Create a class with a static final field and a final field and demonstrate the
+         *      difference between the two.
+         *
+         *      @see ExercisesSix
+         */
+        ExercisesSix exercisesSix = new ExercisesSix();
+        System.out.println(ExercisesSix.ONE);
+        System.out.println(exercisesSix.TWO);
+
+//        Exercise 19:    (2) Create a class with a blank final reference to an object. Perform the initialization of
+//              the blank final inside all constructors. Demonstrate the guarantee that the final must be initialized
+//              before use, and that it cannot be changed once initialized.
     }
 }
 
