@@ -1,5 +1,8 @@
 package chapter.seven.exercises;
 
+import chapter.six.exercises.Derived;
+
+import java.awt.event.MouseAdapter;
 import java.util.Random;
 
 public class ExercisesSeven {
@@ -127,6 +130,8 @@ public class ExercisesSeven {
          *      @see Stringed
          *      @see Brass
          *      @see Woodwind
+         *      @see Instrument
+         *      @see Music3
          */
         Instrument[] orchestra = {
                 new Wind(),
@@ -160,14 +165,34 @@ public class ExercisesSeven {
             System.out.println(instruments[i]);
         }
 
-//        Exercise 9:  (3) Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster, etc. In the base class,
-//              provide methods that are common to all Rodents, and override these in the derived classes to perform
-//              different behaviors depending on the specific type of Rodent. Create an array of Rodent, fill it with
-//              different specific types of Rodents, and call your base-class methods to see what happens.
+        /**
+         * Exercise 9:  (3) Create an inheritance hierarchy of Rodent: Mouse, Gerbil, Hamster, etc. In the base class,
+         *      provide methods that are common to all Rodents, and override these in the derived classes to perform
+         *      different behaviors depending on the specific type of Rodent. Create an array of Rodent, fill it with
+         *      different specific types of Rodents, and call your base-class methods to see what happens.
+         *
+         *      @see Rodent
+         *      @see Hamster
+         *      @see Gerbil
+         *      @see Mouse
+         */
+        Rodent[] rodents = {new Mouse(), new Gerbil(), new Hamster()};
 
-//        Exercise 10:    (3) Create a base class with two methods. In the first method, call the second method.
-//              Inherit a class and override the second method. Create an object of the derived class, upcast it to
-//              the base type, and call the first method. Explain what happens.
+        for (Rodent rodent : rodents) {
+            rodent.move();
+            rodent.gnaw();
+        }
+
+        /**
+         * Exercise 10:    (3) Create a base class with two methods. In the first method, call the second method.
+         *      Inherit a class and override the second method. Create an object of the derived class, upcast it to
+         *      the base type, and call the first method. Explain what happens.
+         *
+         *      @see DerivedClass1
+         *      @see BaseClass1
+         */
+        BaseClass1 derivedClass1 = new DerivedClass1();
+        derivedClass1.method1();
     }
 }
 
