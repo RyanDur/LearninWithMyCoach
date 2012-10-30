@@ -150,6 +150,9 @@ public class ExercisesSeven {
 
         /**
          * Exercise 8:  (2) Modify Music3.java so that it randomly creates Instrument objects the way Shapes.java does.
+         *
+         *      @see Instruments
+         *      @see RandomInstrumentGenerator
          */
         Instrument[] instruments = new Instrument[9];
         for(int i = 0; i < s.length; i++) {

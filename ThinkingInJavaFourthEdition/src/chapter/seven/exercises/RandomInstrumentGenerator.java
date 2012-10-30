@@ -2,6 +2,12 @@ package chapter.seven.exercises;
 
 import java.util.Random;
 
+/**
+ * Exercise 8:  (2) Modify Music3.java so that it randomly creates Instrument objects the way Shapes.java does.
+ *
+ *      @see Instruments
+ *      @see ExercisesSeven
+ */
 public class RandomInstrumentGenerator {
     private Random rand = new Random(47);
     public Instrument next() {
