@@ -72,20 +72,23 @@ public class ExercisesSeven {
 
         /**
          *   Exercise 3:  (1) Add a new method in the base class of Shapes.java that prints a message, but do not
-         *          override it in the derived classes. Explain what happens. Now override it in one of the derived
-         *          classes but not the others, and see what happens. Finally, override it in all the derived classes.
+         *        override it in the derived classes. Explain what happens. Now override it in one of the derived
+         *        classes but not the others, and see what happens. Finally, override it in all the derived classes.
          *
-         *          @see Shape
-         *          @see Circle
-         *          @see Square
-         *          @see Triangle
+         *        @see Shape
+         *        @see Circle
+         *        @see Square
+         *        @see Triangle
          */
 
-
-
-
-//        Exercise 4:  (2) Add a new type of Shape to Shapes.java and verify in main( ) that polymorphism works for
-//              your new type as it does in the old types.
+        /**
+         * Exercise 4:  (2) Add a new type of Shape to Shapes.java and verify in main( ) that polymorphism works for
+         *      your new type as it does in the old types.
+         *
+         *      @see Octagon
+         */
+        Shape octagon = new Octagon();
+        System.out.println(octagon);
 
 //        Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
 //              wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
