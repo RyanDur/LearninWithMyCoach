@@ -1,6 +1,7 @@
 package chapter.six.exercises;
 
 
+import chapter.four.exercises.FinalizedClass;
 import chapter.six.exercises.protectedpackage.AClass;
 
 public class ExercisesSix {
@@ -101,6 +102,20 @@ public class ExercisesSix {
      *              <li>Exercise 19:    (2) Create a class with a blank final reference to an object. Perform the
      *                  initialization of the blank final inside all constructors. Demonstrate the guarantee that the
      *                  final must be initialized before use, and that it cannot be changed once initialized.</li>
+     *
+     *              <li>Exercise 20:   (1) Show that the @Override annotation solves the problem in this section.</li>
+     *
+     *              <li>Exercise 21:    (1) Create a class with a final method. Inherit from that class and attempt to
+     *                  override that method.</li>
+     *
+     *              <li>Exercise 22:   (1) Create a final class and attempt to inherit from it.</li>
+     *
+     *              <li>Exercise 23:   (2) Prove that class loading takes place only once. Prove that loading may be
+     *                  caused by either the creation of the first instance of that class or by the access of a static
+     *                  member.</li>
+     *
+     *              <li>Exercise 24:   (2) In Beetle.java, inherit a specific type of beetle from class Beetle,
+     *                  following the same format as the existing classes. Trace and explain the output.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -315,6 +330,36 @@ public class ExercisesSix {
          *      @see BlankFinal
          */
         BlankFinal blankFinal = new BlankFinal(frog);
+
+//        Exercise 20:   (1) Show that the @Override annotation solves the problem in this section.
+        OverridingPrivate2 op2 = new OverridingPrivate2();
+        op2.f();
+        op2.g();
+        // You can upcast:
+        OverridingPrivate op = op2;
+        // But you can't call the methods:
+        //! op.f();
+        //! op.g();
+        // Same here:
+        WithFinals wf = op2;
+        //! wf.f();
+        //! wf.g();
+
+//        Exercise 21:    (1) Create a class with a final method. Inherit from that class and attempt to override that
+//              method.
+
+        /**
+         * Exercise 22:   (1) Create a final class and attempt to inherit from it.
+         *
+         *      @see FinalClass
+         *      @see InheritClass
+         */
+        InheritClass inheritClass = new InheritClass();
+
+//        Exercise 23:   (2) Prove that class loading takes place only once. Prove that loading may be caused by either
+//              the creation of the first instance of that class or by the access of a static member.
+
+//        Exercise 24:   (2) In Beetle.java, inherit a specific type of beetle from class Beetle, following the same format as the existing classes. Trace and explain the output.
     }
 }
 
