@@ -214,9 +214,29 @@ public class ExercisesSeven {
          */
         new Sandwich();
 
-//        Exercise 12:    (3) Modify Exercise 9 so that it demonstrates the order of initialization of the base classes
-//              and derived classes. Now add member objects to both the base and derived classes, and show the order in
-//              which their initialization occurs during construction.
+
+        /**
+         * Exercise 12:    (3) Modify Exercise 9 so that it demonstrates the order of initialization of the base classes
+         *      and derived classes. Now add member objects to both the base and derived classes, and show the order in
+         *      which their initialization occurs during construction.
+         *
+         *      @see Rodent
+         *      @see Hamster
+         *      @see Mouse
+         *      @see Gerbil
+         *      @see Instrument
+         *      @see Stringed
+         *      @see Reed
+         *      @see Brass
+         *      @see Percussion
+         */
+        for (Rodent rodent : rodents) {
+            rodent.dispose();
+        }
+
+//        Exercise 13:    (3) Add a finalize( ) method to ReferenceCounting.java to verify the termination condition (see the Initialization & Cleanup chapter).
+//
+//        Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with reference counting, and demonstrate that it works properly.
     }
 }
 

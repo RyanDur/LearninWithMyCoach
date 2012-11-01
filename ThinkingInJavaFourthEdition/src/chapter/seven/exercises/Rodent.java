@@ -13,7 +13,30 @@ package chapter.seven.exercises;
  */
 public class Rodent {
 
+    public Rodent() {
+        System.out.println("Create Rodent");
+    }
+
     public void move() {}
 
     public void gnaw() {}
+
+    /**
+     * Exercise 12:    (3) Modify Exercise 9 so that it demonstrates the order of initialization of the base classes
+     *      and derived classes. Now add member objects to both the base and derived classes, and show the order in
+     *      which their initialization occurs during construction.
+     *
+     *      @see ExercisesSeven
+     *      @see Hamster
+     *      @see Mouse
+     *      @see Gerbil
+     *      @see Instrument
+     *      @see Stringed
+     *      @see Reed
+     *      @see Brass
+     *      @see Percussion
+     */
+    public void dispose() {
+        System.out.println("Dispose of Rodent");
+    }
 }
