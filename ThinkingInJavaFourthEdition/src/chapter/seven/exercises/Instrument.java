@@ -13,9 +13,18 @@ package chapter.seven.exercises;
  *      @see Music3
  */
 public class Instrument {
+    /**
+     * Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with reference
+     *      counting, and demonstrate that it works properly.
+     *      @see ExercisesSeven
+     */
+    private int refcount = 0;
+    private static long counter = 0;
+    private final long id = counter++;
 
     public Instrument() {
         System.out.println("Create Instrument");
+        System.out.println("Creating " + this);
     }
 
     void play(Note n) {
@@ -43,5 +52,11 @@ public class Instrument {
      */
     public void dispose() {
         System.out.println("Dispose of Instrument");
+        --refcount;
+        System.out.println("Disposing " + this);
+    }
+
+    public String toString() {
+        return "Instrument " + id;
     }
 }

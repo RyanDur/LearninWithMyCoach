@@ -61,6 +61,9 @@ public class ExercisesSeven {
      *
      *             <li>Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with
      *             reference counting, and demonstrate that it works properly.</li>
+     *
+     *             <li>Exercise 15:    (2) Add a RectangularGlyph to PolyConstructors.java and demonstrate the problem
+     *             described in this section.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -250,9 +253,22 @@ public class ExercisesSeven {
          */
         new ReferenceCounting();
 
+        /**
+         * Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with reference
+         *      counting, and demonstrate that it works properly.
+         *      @see Instrument
+         */
 
-//        Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with reference
-//              counting, and demonstrate that it works properly.
+        /**
+         * Exercise 15:    (2) Add a RectangularGlyph to PolyConstructors.java and demonstrate the problem described in
+         *      this section.
+         *
+         *      @see Glyph
+         *      @see PolyConstructors
+         *      @see RoundGlyph
+         *      @see RectangularGlyph
+         */
+        new PolyConstructors();
     }
 }
 
