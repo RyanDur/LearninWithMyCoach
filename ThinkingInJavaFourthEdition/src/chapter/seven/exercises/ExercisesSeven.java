@@ -49,6 +49,12 @@ public class ExercisesSeven {
      *             <li>Exercise 10:    (3) Create a base class with two methods. In the first method, call the second
      *             method. Inherit a class and override the second method. Create an object of the derived class,
      *             upcast it to the base type, and call the first method. Explain what happens.</li>
+     *
+     *             <li>Exercise 11:    (1) Add class Pickle to Sandwich.java</li>
+     *
+     *             <li>Exercise 12:    (3) Modify Exercise 9 so that it demonstrates the order of initialization of the
+     *             base classes and derived classes. Now add member objects to both the base and derived classes, and
+     *             show the order in which their initialization occurs during construction.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -193,6 +199,24 @@ public class ExercisesSeven {
          */
         BaseClass1 derivedClass1 = new DerivedClass1();
         derivedClass1.method1();
+
+        /**
+         * Exercise 11:    (1) Add class Pickle to Sandwich.java
+         *
+         *      @see Meal
+         *      @see Bread
+         *      @see Cheese
+         *      @see Lettuce
+         *      @see Pickle
+         *      @see Lunch
+         *      @see Sandwich
+         *      @see PortableLunch
+         */
+        new Sandwich();
+
+//        Exercise 12:    (3) Modify Exercise 9 so that it demonstrates the order of initialization of the base classes
+//              and derived classes. Now add member objects to both the base and derived classes, and show the order in
+//              which their initialization occurs during construction.
     }
 }
 
