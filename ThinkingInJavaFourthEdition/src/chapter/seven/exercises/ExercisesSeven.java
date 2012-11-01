@@ -66,7 +66,7 @@ public class ExercisesSeven {
      * </html>
      *
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Throwable {
 
         /**
          * Exercise 1:   (2) Create a Cycle class, with subclasses UniCycle, Bicycle and Tricycle. Demonstrate that an
@@ -240,8 +240,16 @@ public class ExercisesSeven {
             rodent.dispose();
         }
 
-//        Exercise 13:    (3) Add a finalize( ) method to ReferenceCounting.java to verify the termination condition
-//              (see the Initialization & Cleanup chapter).
+        /**
+         * Exercise 13:    (3) Add a finalize( ) method to ReferenceCounting.java to verify the termination condition
+         *      (see the Initialization & Cleanup chapter).
+         *
+         *      @see ReferenceCounting
+         *      @see Shared
+         *      @see Composing
+         */
+        new ReferenceCounting();
+
 
 //        Exercise 14:    (4) Modify Exercise 12 so that one of the member objects is a shared object with reference
 //              counting, and demonstrate that it works properly.
