@@ -1,10 +1,5 @@
 package chapter.seven.exercises;
 
-import chapter.six.exercises.Derived;
-
-import java.awt.event.MouseAdapter;
-import java.util.Random;
-
 public class ExercisesSeven {
     /**
      * <html>
