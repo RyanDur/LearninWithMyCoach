@@ -4,29 +4,27 @@ package chapter.seven.exercises;
  * Exercise 1:   (2) Create a Cycle class, with subclasses UniCycle, Bicycle and Tricycle. Demonstrate that an
  *      instance of each type can be upcast to Cycle via a ride( ) method.
  *
- *      @see ExercisesSeven
+ *      @see Cycle
  *      @see UniCycle
- *      @see Bicycle
+ *      @see ExercisesSeven
  *      @see Tricycle
  */
-public class Cycle {
+public class Bicycle extends Cycle{
+    public String toString() {
+        return "Bicycle";
+    }
 
     /**
      * Exercise 5:  (1) Starting from Exercise 1, add a wheels( ) method in Cycle, which returns the number of
      *      wheels. Modify ride( ) to call wheels( ) and verify that polymorphism works.
      *
-     *      @see ExercisesSeven
+     *      @see Cycle
      *      @see Tricycle
-     *      @see Bicycle
+     *      @see ExercisesSeven
      *      @see UniCycle
      */
-    public void ride(Cycle cycle) {
-        System.out.println("I am riding a " + cycle);
-        System.out.println("The number of wheels it has is " + cycle.wheels());
-    }
-
     public int wheels() {
-        return 0;
+        return 2;
     }
 
     /**
@@ -39,5 +37,7 @@ public class Cycle {
      *      @see UniCycle
      *      @see Bicycle
      */
-    public void balance() {}
+    public void balance() {
+        System.out.println("Balancing on " + this);
+    }
 }

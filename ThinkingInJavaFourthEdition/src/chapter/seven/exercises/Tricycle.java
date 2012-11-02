@@ -6,6 +6,7 @@ package chapter.seven.exercises;
  *
  *      @see Cycle
  *      @see UniCycle
+ *      @see Bicycle
  *      @see ExercisesSeven
  */
 public class Tricycle extends Cycle {
@@ -20,6 +21,7 @@ public class Tricycle extends Cycle {
      *
      *      @see Cycle
      *      @see ExercisesSeven
+     *      @see Bicycle
      *      @see UniCycle
      */
     public int wheels() {

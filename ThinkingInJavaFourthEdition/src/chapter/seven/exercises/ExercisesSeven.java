@@ -68,6 +68,11 @@ public class ExercisesSeven {
      *             <li>Exercise 16:    (3) Following the example in Transmogrify.java, create a Starship class
      *             containing an AlertStatus reference that can indicate three different states. Include methods to
      *             change the states.</li>
+     *
+     *             <li>Exercise 17:    (2) Using the Cycle hierarchy from Exercise 1, add a balance( ) method to
+     *             Unicycle and Bicycle, but not to Tricycle. Create instances of all three types and upcast them to an
+     *             array of Cycle. Try to call balance( ) on each element of the array and observe the results.
+     *             Downcast and call balance( ) and observe what happens.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -81,14 +86,17 @@ public class ExercisesSeven {
          *
          *      @see Cycle
          *      @see UniCycle
+         *      @see Bicycle
          *      @see Tricycle
          */
         Cycle cycle = new Cycle();
         UniCycle uniCycle = new UniCycle();
         Tricycle tricycle = new Tricycle();
+        Bicycle bicycle = new Bicycle();
 
         cycle.ride(uniCycle);
         cycle.ride(tricycle);
+        cycle.ride(bicycle);
 
         /**
          * Exercise 2:  (1) Add the @Override annotation to the shapes example.
@@ -137,6 +145,7 @@ public class ExercisesSeven {
          *
          *      @see Cycle
          *      @see Tricycle
+         *      @see Bicycle
          *      @see UniCycle
          */
 
@@ -292,6 +301,21 @@ public class ExercisesSeven {
         starship.status();
         starship.changeStatus();
         starship.status();
+
+        /**
+         * Exercise 17:    (2) Using the Cycle hierarchy from Exercise 1, add a balance( ) method to Unicycle and
+         *      Bicycle, but not to Tricycle. Create instances of all three types and upcast them to an array of Cycle.
+         *      Try to call balance( ) on each element of the array and observe the results. Downcast and call
+         *      balance( ) and observe what happens.
+         *
+         *      @see Cycle
+         *      @see UniCycle
+         *      @see Bicycle
+         */
+        Cycle[] cycles = {new UniCycle(),new Bicycle(),new Tricycle()};
+        for (Cycle cycle1 : cycles) {
+            cycle1.balance();
+        }
     }
 }
 
