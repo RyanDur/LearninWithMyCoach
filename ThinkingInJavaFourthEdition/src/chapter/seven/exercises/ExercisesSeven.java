@@ -64,6 +64,10 @@ public class ExercisesSeven {
      *
      *             <li>Exercise 15:    (2) Add a RectangularGlyph to PolyConstructors.java and demonstrate the problem
      *             described in this section.</li>
+     *
+     *             <li>Exercise 16:    (3) Following the example in Transmogrify.java, create a Starship class
+     *             containing an AlertStatus reference that can indicate three different states. Include methods to
+     *             change the states.</li>
      *         </ol>
      *     </body>
      * </html>
@@ -269,6 +273,25 @@ public class ExercisesSeven {
          *      @see RectangularGlyph
          */
         new PolyConstructors();
+
+        /**
+         * Exercise 16:    (3) Following the example in Transmogrify.java, create a Starship class containing an
+         *      AlertStatus reference that can indicate three different states. Include methods to change the states.
+         *
+         *      @see Starship
+         *      @see AlertStatus
+         *      @see GreenAlert
+         *      @see YellowAlert
+         *      @see RedAlert
+         */
+        Starship starship = new Starship();
+        starship.status();
+        starship.changeStatus();
+        starship.status();
+        starship.changeStatus();
+        starship.status();
+        starship.changeStatus();
+        starship.status();
     }
 }
 
