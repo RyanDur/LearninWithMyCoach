@@ -35,7 +35,7 @@ public class Bicycle extends Cycle{
      *
      *      @see Cycle
      *      @see UniCycle
-     *      @see Bicycle
+     *      @see ExercisesSeven
      */
     public void balance() {
         System.out.println("Balancing on " + this);

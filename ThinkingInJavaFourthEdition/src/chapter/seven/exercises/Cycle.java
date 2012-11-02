@@ -35,7 +35,7 @@ public class Cycle {
      *      Try to call balance( ) on each element of the array and observe the results. Downcast and call
      *      balance( ) and observe what happens.
      *
-     *      @see Cycle
+     *      @see ExercisesSeven
      *      @see UniCycle
      *      @see Bicycle
      */
