@@ -6,6 +6,7 @@ package chapter.seven.exercises;
  *
  *      @see Cycle
  *      @see ExercisesSeven
+ *      @see Bicycle
  *      @see Tricycle
  */
 public class UniCycle extends Cycle {
@@ -20,9 +21,24 @@ public class UniCycle extends Cycle {
      *
      *      @see Cycle
      *      @see Tricycle
+     *      @see Bicycle
      *      @see ExercisesSeven
      */
     public int wheels() {
         return 1;
+    }
+
+    /**
+     * Exercise 17:    (2) Using the Cycle hierarchy from Exercise 1, add a balance( ) method to Unicycle and
+     *      Bicycle, but not to Tricycle. Create instances of all three types and upcast them to an array of Cycle.
+     *      Try to call balance( ) on each element of the array and observe the results. Downcast and call
+     *      balance( ) and observe what happens.
+     *
+     *      @see Cycle
+     *      @see ExercisesSeven
+     *      @see Bicycle
+     */
+    public void balance() {
+        System.out.println("Balancing on " + this);
     }
 }
